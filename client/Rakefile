@@ -9,3 +9,5 @@ task :update do
     bucket.objects[path].write(File.read(path), {:acl => :public_read})
   end
 end
+
+task :default => [:update]
