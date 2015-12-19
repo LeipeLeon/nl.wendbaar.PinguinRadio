@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CB7F71C25AD2300B89F77 /* AppDelegate.swift */; };
+		407CB7FA1C25AD2300B89F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CB7F91C25AD2300B89F77 /* ViewController.swift */; };
+		407CB7FD1C25AD2400B89F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407CB7FB1C25AD2400B89F77 /* Main.storyboard */; };
+		407CB7FF1C25AD2400B89F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CB7FE1C25AD2400B89F77 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		407CB7F41C25AD2300B89F77 /* PinguinRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinguinRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		407CB7F71C25AD2300B89F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		407CB7F91C25AD2300B89F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		407CB7FC1C25AD2400B89F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		407CB7FE1C25AD2400B89F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		407CB8001C25AD2400B89F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		407CB7F11C25AD2300B89F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		407CB7EB1C25AD2300B89F77 = {
+			isa = PBXGroup;
+			children = (
+				407CB7F61C25AD2300B89F77 /* PinguinRadio */,
+				407CB7F51C25AD2300B89F77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		407CB7F51C25AD2300B89F77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				407CB7F41C25AD2300B89F77 /* PinguinRadio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		407CB7F61C25AD2300B89F77 /* PinguinRadio */ = {
+			isa = PBXGroup;
+			children = (
+				407CB7F71C25AD2300B89F77 /* AppDelegate.swift */,
+				407CB7F91C25AD2300B89F77 /* ViewController.swift */,
+				407CB7FB1C25AD2400B89F77 /* Main.storyboard */,
+				407CB7FE1C25AD2400B89F77 /* Assets.xcassets */,
+				407CB8001C25AD2400B89F77 /* Info.plist */,
+			);
+			path = PinguinRadio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		407CB7F31C25AD2300B89F77 /* PinguinRadio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407CB8031C25AD2400B89F77 /* Build configuration list for PBXNativeTarget "PinguinRadio" */;
+			buildPhases = (
+				407CB7F01C25AD2300B89F77 /* Sources */,
+				407CB7F11C25AD2300B89F77 /* Frameworks */,
+				407CB7F21C25AD2300B89F77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinguinRadio;
+			productName = PinguinRadio;
+			productReference = 407CB7F41C25AD2300B89F77 /* PinguinRadio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		407CB7EC1C25AD2300B89F77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wendbaar.nl;
+				TargetAttributes = {
+					407CB7F31C25AD2300B89F77 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 407CB7EF1C25AD2300B89F77 /* Build configuration list for PBXProject "PinguinRadio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 407CB7EB1C25AD2300B89F77;
+			productRefGroup = 407CB7F51C25AD2300B89F77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				407CB7F31C25AD2300B89F77 /* PinguinRadio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		407CB7F21C25AD2300B89F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407CB7FF1C25AD2400B89F77 /* Assets.xcassets in Resources */,
+				407CB7FD1C25AD2400B89F77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		407CB7F01C25AD2300B89F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				407CB7FA1C25AD2300B89F77 /* ViewController.swift in Sources */,
+				407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		407CB7FB1C25AD2400B89F77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407CB7FC1C25AD2400B89F77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		407CB8011C25AD2400B89F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		407CB8021C25AD2400B89F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		407CB8041C25AD2400B89F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = PinguinRadio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wendbaar.PinguinRadio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		407CB8051C25AD2400B89F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = PinguinRadio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.wendbaar.PinguinRadio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		407CB7EF1C25AD2300B89F77 /* Build configuration list for PBXProject "PinguinRadio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407CB8011C25AD2400B89F77 /* Debug */,
+				407CB8021C25AD2400B89F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407CB8031C25AD2400B89F77 /* Build configuration list for PBXNativeTarget "PinguinRadio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				407CB8041C25AD2400B89F77 /* Debug */,
+				407CB8051C25AD2400B89F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 407CB7EC1C25AD2300B89F77 /* Project object */;
+}
