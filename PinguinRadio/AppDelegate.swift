@@ -7,15 +7,39 @@
 //
 
 import UIKit
+import TVMLKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDelegate {
+    
     var window: UIWindow?
 
+    var appController: TVApplicationController?
+
+//    static let TVBaseURL = "https://pinguin-radio.s3.amazonaws.com"
+    static let TVBaseURL = "http://192.168.0.102:9001/"
+    static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
+        let appControllerContext = TVApplicationControllerContext()
+        
+        guard let javaScriptURL = NSURL(string: AppDelegate.TVBootURL) else {
+            fatalError("unable to create NSURL")
+        }
+        appControllerContext.javaScriptApplicationURL = javaScriptURL
+        appControllerContext.launchOptions["BASEURL"] = AppDelegate.TVBaseURL
+
+        if let launchOptions = launchOptions as? [String: AnyObject] {
+            for (kind, value) in launchOptions {
+                appControllerContext.launchOptions[kind] = value
+            }
+        }
+        
+        appController = TVApplicationController(context: appControllerContext, window: window, delegate: self)
+        
         return true
     }
 
