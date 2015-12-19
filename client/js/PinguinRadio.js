@@ -7,6 +7,18 @@ var PinguinRadio = {
     )
   },
 
+  getNowPlaying: function(callback, errorCallback) {
+    nowPlaying.timestamp = Date.now();
+    PinguinRadio.get(
+      "http://player.pinguinradio.com/index.php?c=" + nowPlaying.title + "&_=" + nowPlaying.timestamp, 
+      function(data) {
+        console.log('data:', nowPlaying, data);
+      }, function(error) {
+        console.log('error:', nowPlaying, error);
+      }
+    )
+  },
+
   get: function(url, callback, errorCallback){
     request = new XMLHttpRequest()
     request.open("GET", url)

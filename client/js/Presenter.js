@@ -1,3 +1,5 @@
+var timer_id;
+var nowPlayingStation;
 var Presenter = {
   // 1
   makeDocument: function(resource) {
@@ -36,6 +38,9 @@ var Presenter = {
         player.playlist.push(mediaItem);
         player.present();
         player.play();
+        nowPlaying = {title: title, timestamp: 0}
+        PinguinRadio.getNowPlaying();
+        timer_id = setInterval(PinguinRadio.getNowPlaying, 10000);
       break
     }
   },
