@@ -1,13 +1,10 @@
 require 'aws-sdk'
-# load 'env.rb'
 
 task :update do
   service = AWS::S3.new
   bucket = service.buckets['pinguin-radio']
 
-  [
-    'js/application.js'
-  ].each do |path|
+  `git ls-files js`.split("\n").each do |path|
     puts "Uploading #{path}..."
     bucket.objects[path].write(File.read(path), {:acl => :public_read})
   end
