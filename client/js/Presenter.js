@@ -1,4 +1,4 @@
-var timer_id;
+var timer_id = null;
 var nowPlayingStation;
 var player;
 var Presenter = {
@@ -43,6 +43,9 @@ var Presenter = {
         player.play();
         nowPlaying = {title: title, timestamp: 0}
         PinguinRadio.getNowPlaying();
+        if (timer_id) {
+          clearInterval(timer_id)
+        }
         timer_id = setInterval(PinguinRadio.getNowPlaying, 10000);
       break
     }
