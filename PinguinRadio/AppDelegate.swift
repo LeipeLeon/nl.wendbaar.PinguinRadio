@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TVApplicationControllerDe
 
     var appController: TVApplicationController?
 
-//    static let TVBaseURL = "https://pinguin-radio.s3.amazonaws.com"
-    static let TVBaseURL = "http://192.168.0.102:9001/"
+    static let TVBaseURL = "https://pinguin-radio.s3.amazonaws.com/"
+//    static let TVBaseURL = "http://192.168.0.102:9001/"
     static let TVBootURL = "\(AppDelegate.TVBaseURL)js/application.js"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
