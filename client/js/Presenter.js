@@ -1,5 +1,6 @@
 var timer_id;
 var nowPlayingStation;
+var player;
 var Presenter = {
   // 1
   makeDocument: function(resource) {
@@ -20,19 +21,21 @@ var Presenter = {
   },
 
   load: function(event) {
-    var self = this,
-    element = event.target,
+    var self  = this
+    element   = event.target
+    view      = element.getAttribute("view")
 
-    view = element.getAttribute("view")
     streamURL = element.getAttribute("stream_url")
-    title = element.getAttribute("title")
-    artwork = element.getAttribute("image")
+    title     = element.getAttribute("title")
+    artwork   = element.getAttribute("image")
+
     switch(view) {
       case "station":
-        var player = new Player();
+        player = new Player();
         var playlist = new Playlist();
         var mediaItem = new MediaItem('audio', streamURL);
         mediaItem.title = title;
+        mediaItem.subtitle = '-';
         mediaItem.artworkImageURL = artwork;
         player.playlist = playlist;
         player.playlist.push(mediaItem);

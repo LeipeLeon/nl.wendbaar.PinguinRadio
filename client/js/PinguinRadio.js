@@ -12,6 +12,11 @@ var PinguinRadio = {
     PinguinRadio.get(
       "http://player.pinguinradio.com/index.php?c=" + nowPlaying.title + "&_=" + nowPlaying.timestamp, 
       function(data) {
+        image = 'http://player.pinguinradio.com/' + data.image
+
+        player.playlist.item(0).title           = data.artist + ' - ' + data.title
+        player.playlist.item(0).artworkImageURL = image
+
         console.log('data:', nowPlaying, data);
       }, function(error) {
         console.log('error:', nowPlaying, error);
