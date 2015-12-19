@@ -15,3 +15,6 @@ Update `PinguinRadio/AppDelegate.swift` to use your local server instead of the 
     static let TVBaseURL = "http://<your.ip.address>:9001/"
     
 Please [create an issue](https://github.com/LeipeLeon/nl.wendbaar.PinguinRadio/issues) if you run into any problems.
+
+![Home](https://pinguin-radio.s3.amazonaws.com/screenshots/screen1.png)
+![App](https://pinguin-radio.s3.amazonaws.com/screenshots/screen2.png)
