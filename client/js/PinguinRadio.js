@@ -10,13 +10,14 @@ var PinguinRadio = {
   getNowPlaying: function(callback, errorCallback) {
     nowPlaying.timestamp = Date.now();
     PinguinRadio.get(
-      "http://player.pinguinradio.com/index.php?c=" + nowPlaying.station + "&_=" + nowPlaying.timestamp, 
+      "http://player.pinguinradio.com/index.php?c=" + nowPlaying.title + "&_=" + nowPlaying.timestamp, 
       function(data) {
-        for(var prop in data) {
-          var elem = nowPlayingDoc.getElementById(prop)
-          if (elem) {
-            elem.innerHTML = data[prop];
-          }
+        title = data.artist + ' | ' + data.title
+        if (player.currentMediaItem.title !== title) {
+          image = 'http://player.pinguinradio.com/' + data.image
+          player.currentMediaItem.title           = title
+          player.currentMediaItem.artworkImageURL = image
+          player.present();
         }
       }, function(error) {
         console.log('error:', nowPlaying, error);
