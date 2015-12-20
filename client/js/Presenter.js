@@ -1,4 +1,5 @@
 var timer_id = null;
+// var nowPlaying;
 var player;
 var Presenter = {
   // 1
@@ -34,12 +35,12 @@ var Presenter = {
         player.playlist = playlist;
         player.playlist.push(mediaItem);
         player.play();
-        nowPlaying = {station_name: stations[station_id].name, artist: "", title: "", image: "", timestamp: 0}
-        PinguinRadio.getNowPlaying();
-        if (timer_id) {
-          clearInterval(timer_id)
-        }
-        timer_id = setInterval(PinguinRadio.getNowPlaying, 10000);
+        // nowPlaying = {station_name: stations[station_id].name, artist: "", title: "", image: "", timestamp: 0}
+        // PinguinRadio.getNowPlaying();
+        // if (timer_id) {
+        //   clearInterval(timer_id)
+        // }
+        // timer_id = setInterval(PinguinRadio.getNowPlaying, 10000);
       break
     }
   },
