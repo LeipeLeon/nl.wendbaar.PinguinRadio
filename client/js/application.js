@@ -11,6 +11,11 @@ App.onLaunch = function(options) {
     if(success) {
       PinguinRadio.stations(function(foundStations){
         stations = foundStations;
+        for(i = 0; i < stations.length; i++){
+          station = stations[i]
+          station["image_url"] = 'http://player.pinguinradio.com/' + station.logo
+          station["stream_url"] = (station.streams["Default Quality"] || station.streams["High Quality (320kbs)"])["mp3"]
+        }
         resourceLoader = new ResourceLoader(options.BASEURL);
         resourceLoader.loadResource(`${options.BASEURL}templates/stations.xml.js`, function(resource) {
           var doc = Presenter.makeDocument(resource);

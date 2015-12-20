@@ -1,5 +1,4 @@
 var timer_id = null;
-var nowPlayingStation;
 var player;
 var Presenter = {
   // 1
@@ -21,27 +20,21 @@ var Presenter = {
   },
 
   load: function(event) {
-    var self  = this
-    element   = event.target
-    view      = element.getAttribute("view")
-
-    streamURL = element.getAttribute("stream_url")
-    title     = element.getAttribute("title")
-    artwork   = element.getAttribute("image")
+    element    = event.target
+    view       = element.getAttribute("view")
+    station_id = element.getAttribute("station_id")
 
     switch(view) {
       case "station":
         player = new Player();
         var playlist = new Playlist();
-        var mediaItem = new MediaItem('audio', streamURL);
-        mediaItem.title = title;
-        mediaItem.subtitle = '-';
-        mediaItem.artworkImageURL = artwork;
+        var mediaItem = new MediaItem('audio', stations[station_id].stream_url);
+        mediaItem.title = stations[station_id].name;
+        mediaItem.artworkImageURL = stations[station_id].image_url;
         player.playlist = playlist;
         player.playlist.push(mediaItem);
-        player.present();
         player.play();
-        nowPlaying = {title: title, timestamp: 0}
+        nowPlaying = {station_name: stations[station_id].name, artist: "", title: "", image: "", timestamp: 0}
         PinguinRadio.getNowPlaying();
         if (timer_id) {
           clearInterval(timer_id)
