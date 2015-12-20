@@ -1,5 +1,6 @@
 var timer_id = null;
-var nowPlayingStation;
+var nowPlaying;
+var nowPlayingDoc;
 var player;
 var Presenter = {
   // 1
@@ -21,28 +22,18 @@ var Presenter = {
   },
 
   load: function(event) {
-    var self  = this
-    element   = event.target
-    view      = element.getAttribute("view")
+    element    = event.target
 
-    streamURL = element.getAttribute("stream_url")
-    title     = element.getAttribute("title")
-    artwork   = element.getAttribute("image")
+    view       = element.getAttribute("view")
+    station_id = element.getAttribute("station_id")
 
     switch(view) {
       case "station":
-        player = new Player();
-        var playlist = new Playlist();
-        var mediaItem = new MediaItem('audio', streamURL);
-        mediaItem.title = title;
-        mediaItem.subtitle = '-';
-        mediaItem.artworkImageURL = artwork;
-        player.playlist = playlist;
-        player.playlist.push(mediaItem);
-        player.present();
-        player.play();
-        nowPlaying = {title: title, timestamp: 0}
-        PinguinRadio.getNowPlaying();
+        resourceLoader.loadResourceWithOptions(`${options.BASEURL}templates/product_bundle.xml.js`, station_id, function(resource) {
+          nowPlayingDoc = Presenter.makeDocument(resource);
+          Presenter.pushDocument(nowPlayingDoc);
+        });
+        nowPlaying = {station: stations[station_id].name, artist: "", title: "", image: "", timestamp: 0}
         if (timer_id) {
           clearInterval(timer_id)
         }
@@ -50,5 +41,4 @@ var Presenter = {
       break
     }
   },
-
 }

@@ -1,7 +1,9 @@
 var resourceLoader;
 var stations;
+var options;
 
-App.onLaunch = function(options) {
+App.onLaunch = function(passed_options) {
+  options = passed_options;
   var javascriptFiles = [
     `${options.BASEURL}js/ResourceLoader.js`,
     `${options.BASEURL}js/Presenter.js`,
