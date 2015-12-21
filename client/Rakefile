@@ -4,7 +4,7 @@ task :update do
   service = AWS::S3.new
   bucket = service.buckets['pinguin-radio']
 
-  `git ls-files js templates`.split("\n").each do |path|
+  `git ls-files js templates img`.split("\n").each do |path|
     puts "Uploading #{path}..."
     bucket.objects[path].write(File.read(path), {:acl => :public_read})
   end
