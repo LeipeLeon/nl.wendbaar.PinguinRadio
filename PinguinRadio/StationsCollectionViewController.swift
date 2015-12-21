@@ -12,6 +12,11 @@ private let reuseIdentifier = "StationCell"
 
 class StationsCollectionViewController: UICollectionViewController {
 
+    let stations = [
+        ["tag": "PinguinRadio",   "stream_url": "http://pr320.pinguinradio.com/listen.pls", "title": "Pinguin Radio",   "logo_url":"logo.PinguinRadio"],
+        ["tag": "PinguinGrooves", "stream_url": "http://pg192.pinguinradio.com/listen.pls", "title": "Pinguin Grooves", "logo_url":"logo.PinguinGrooves"]
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +24,7 @@ class StationsCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        // self.collectionView!.registerClass(StationCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -43,20 +48,20 @@ class StationsCollectionViewController: UICollectionViewController {
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return stations.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-    
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! StationCollectionViewCell
+        cell.backgroundColor = UIColor.blackColor()
         // Configure the cell
-    
+        let img = UIImage(named: stations[indexPath.row]["logo_url"]!)
+        cell.logo.image = img
         return cell
     }
 

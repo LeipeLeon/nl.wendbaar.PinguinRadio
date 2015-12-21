@@ -10,8 +10,8 @@
 		407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CB7F71C25AD2300B89F77 /* AppDelegate.swift */; };
 		407CB7FF1C25AD2400B89F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CB7FE1C25AD2400B89F77 /* Assets.xcassets */; };
 		40A44F431C289311002B309C /* StationsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A44F421C289311002B309C /* StationsCollectionViewController.swift */; };
+		40A44F451C289E6D002B309C /* StationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A44F441C289E6D002B309C /* StationCollectionViewCell.swift */; };
 		40BC8C2E1C288F4000C50E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BC8C2C1C288F4000C50E13 /* Main.storyboard */; };
-		40BC8C301C28910000C50E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BC8C2F1C28910000C50E13 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		407CB7FE1C25AD2400B89F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		407CB8001C25AD2400B89F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40A44F421C289311002B309C /* StationsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsCollectionViewController.swift; sourceTree = "<group>"; };
+		40A44F441C289E6D002B309C /* StationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationCollectionViewCell.swift; sourceTree = "<group>"; usesTabs = 1; };
 		40BC8C2D1C288F4000C50E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		40BC8C2F1C28910000C50E13 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +56,10 @@
 			children = (
 				407CB7F71C25AD2300B89F77 /* AppDelegate.swift */,
 				407CB7FE1C25AD2400B89F77 /* Assets.xcassets */,
-				40BC8C2F1C28910000C50E13 /* ViewController.swift */,
 				40BC8C2C1C288F4000C50E13 /* Main.storyboard */,
 				40A44F421C289311002B309C /* StationsCollectionViewController.swift */,
 				407CB8001C25AD2400B89F77 /* Info.plist */,
+				40A44F441C289E6D002B309C /* StationCollectionViewCell.swift */,
 			);
 			path = PinguinRadio;
 			sourceTree = "<group>";
@@ -136,8 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				40A44F431C289311002B309C /* StationsCollectionViewController.swift in Sources */,
-				40BC8C301C28910000C50E13 /* ViewController.swift in Sources */,
 				407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */,
+				40A44F451C289E6D002B309C /* StationCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +240,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PinguinRadio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -253,7 +252,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PinguinRadio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
