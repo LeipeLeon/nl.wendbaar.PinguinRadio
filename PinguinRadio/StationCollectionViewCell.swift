@@ -9,5 +9,7 @@
 import UIKit
 
 class StationCollectionViewCell: UICollectionViewCell {
+
     @IBOutlet weak var logo: UIImageView!
+
 }
