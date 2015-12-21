@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407CB7F71C25AD2300B89F77 /* AppDelegate.swift */; };
 		407CB7FF1C25AD2400B89F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CB7FE1C25AD2400B89F77 /* Assets.xcassets */; };
+		40A44F431C289311002B309C /* StationsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A44F421C289311002B309C /* StationsCollectionViewController.swift */; };
+		40BC8C2E1C288F4000C50E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BC8C2C1C288F4000C50E13 /* Main.storyboard */; };
+		40BC8C301C28910000C50E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BC8C2F1C28910000C50E13 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +19,9 @@
 		407CB7F71C25AD2300B89F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407CB7FE1C25AD2400B89F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		407CB8001C25AD2400B89F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A44F421C289311002B309C /* StationsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsCollectionViewController.swift; sourceTree = "<group>"; };
+		40BC8C2D1C288F4000C50E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40BC8C2F1C28910000C50E13 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,9 @@
 			children = (
 				407CB7F71C25AD2300B89F77 /* AppDelegate.swift */,
 				407CB7FE1C25AD2400B89F77 /* Assets.xcassets */,
+				40BC8C2F1C28910000C50E13 /* ViewController.swift */,
+				40BC8C2C1C288F4000C50E13 /* Main.storyboard */,
+				40A44F421C289311002B309C /* StationsCollectionViewController.swift */,
 				407CB8001C25AD2400B89F77 /* Info.plist */,
 			);
 			path = PinguinRadio;
@@ -115,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				407CB7FF1C25AD2400B89F77 /* Assets.xcassets in Resources */,
+				40BC8C2E1C288F4000C50E13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,11 +135,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A44F431C289311002B309C /* StationsCollectionViewController.swift in Sources */,
+				40BC8C301C28910000C50E13 /* ViewController.swift in Sources */,
 				407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40BC8C2C1C288F4000C50E13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40BC8C2D1C288F4000C50E13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		407CB8011C25AD2400B89F77 /* Debug */ = {
@@ -258,6 +281,7 @@
 				407CB8051C25AD2400B89F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
