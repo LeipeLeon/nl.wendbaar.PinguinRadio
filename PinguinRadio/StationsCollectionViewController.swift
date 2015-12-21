@@ -9,14 +9,14 @@
 import UIKit
 
 private let reuseIdentifier = "StationCell"
+private var stations: NSArray!
 
 class StationsCollectionViewController: UICollectionViewController {
 
     let stations = [
-        ["tag": "PinguinRadio",   "stream_url": "http://pr320.pinguinradio.com/listen.pls", "title": "Pinguin Radio",   "logo_url":"logo.PinguinRadio"],
-        ["tag": "PinguinGrooves", "stream_url": "http://pg192.pinguinradio.com/listen.pls", "title": "Pinguin Grooves", "logo_url":"logo.PinguinGrooves"]
+        Station(tag: "PinguinRadio",   stream_url: "http://pr320.pinguinradio.com/listen.pls", title: "Pinguin Radio",   logo_url:"logo.PinguinRadio"),
+        Station(tag: "PinguinGrooves", stream_url: "http://pg192.pinguinradio.com/listen.pls", title: "Pinguin Grooves", logo_url:"logo.PinguinGrooves")
     ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +25,6 @@ class StationsCollectionViewController: UICollectionViewController {
 
         // Register cell classes
         // self.collectionView!.registerClass(StationCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         // Do any additional setup after loading the view.
     }
 
@@ -60,9 +59,21 @@ class StationsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! StationCollectionViewCell
         cell.backgroundColor = UIColor.blackColor()
         // Configure the cell
-        let img = UIImage(named: stations[indexPath.row]["logo_url"]!)
+        let img = UIImage(named: stations[indexPath.row].logo_url)
         cell.logo.image = img
         return cell
+    }
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+//        selected_station = stations[indexPath.row]
+        self.performSegueWithIdentifier("showPlayer", sender: indexPath)
+        
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if "showPlayer" == segue.identifier {
+            var playerViewController = segue.destinationViewController as! PlayerViewController
+            playerViewController.station = stations[sender!.row]
+        }
     }
 
     // MARK: UICollectionViewDelegate
