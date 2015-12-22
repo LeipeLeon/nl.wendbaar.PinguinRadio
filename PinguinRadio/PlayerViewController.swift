@@ -22,9 +22,13 @@ class PlayerViewController: AVPlayerViewController {
         let imageView = UIImageView(frame: CGRectMake(40, 40, bounds.width - 80, bounds.height - 200))
         imageView.image = UIImage(named: station!.logo_url)
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
+        imageView.backgroundColor = UIColor(red:0.13, green:0.11, blue:0.35, alpha:1)
+        
         
         let overlayView = UIView(frame: CGRectMake(0, 0, bounds.width, bounds.height))
+        overlayView.backgroundColor = UIColor(red:0.13, green:0.11, blue:0.35, alpha:1)
         overlayView.addSubview(imageView)
+
         contentOverlayView?.addSubview(overlayView)
         
         // don't allow skipping

@@ -61,10 +61,11 @@ class StationsCollectionViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! StationCollectionViewCell
-        cell.backgroundColor = UIColor.blackColor()
+        cell.backgroundColor = UIColor(red:0.13, green:0.11, blue:0.35, alpha:1)
         // Configure the cell
         let img = UIImage(named: stations[indexPath.row].logo_url)
         cell.logo.image = img
+        cell.logo.backgroundColor = UIColor(red:0.13, green:0.11, blue:0.35, alpha:1)
         return cell
     }
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
