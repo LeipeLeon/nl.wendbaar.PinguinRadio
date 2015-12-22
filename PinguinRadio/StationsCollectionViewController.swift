@@ -76,7 +76,7 @@ class StationsCollectionViewController: UICollectionViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if "showPlayer" == segue.identifier {
-            var playerViewController = segue.destinationViewController as! PlayerViewController
+            let playerViewController = segue.destinationViewController as! PlayerViewController
             playerViewController.station = stations[sender!.row]
         }
     }
