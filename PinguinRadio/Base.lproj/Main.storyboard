@@ -72,7 +72,7 @@
         <!--AV Player View Controller-->
         <scene sceneID="eCe-sa-Gel">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="dMD-cX-f7B" customClass="PlayerViewController" customModule="tvOSNativePlayer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="dMD-cX-f7B" customClass="PlayerViewController" customModule="PinguinRadio" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOI-QL-bXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6817" y="251"/>

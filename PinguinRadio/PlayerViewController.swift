@@ -11,16 +11,26 @@ import AVKit
 
 class PlayerViewController: AVPlayerViewController {
 
-//    let overlayView = UIView(frame: CGRectMake(50, 50, 200, 200))
     var station: Station?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print(station)
+
+        let bounds = UIScreen.mainScreen().bounds.size
+
+        let imageView = UIImageView(frame: CGRectMake(40, 40, bounds.width - 80, bounds.height - 200))
+        imageView.image = UIImage(named: station!.logo_url)
+        imageView.contentMode = UIViewContentMode.ScaleAspectFit
         
-//        overlayView.addSubview(UIImageView(image: UIImage(named: "tv-watermark")))
-//        contentOverlayView?.addSubview(overlayView)
+        let overlayView = UIView(frame: CGRectMake(0, 0, bounds.width, bounds.height))
+        overlayView.addSubview(imageView)
+        contentOverlayView?.addSubview(overlayView)
         
+        // don't allow skipping
+        self.showsPlaybackControls = false
+        self.requiresLinearPlayback = true
+
         player = AVPlayer(URL: NSURL(string: station!.stream_url)!)
         player?.play()
     }
