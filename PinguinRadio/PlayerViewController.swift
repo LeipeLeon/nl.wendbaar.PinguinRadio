@@ -19,8 +19,14 @@ class PlayerViewController: AVPlayerViewController {
 
         let bounds = UIScreen.mainScreen().bounds.size
 
-        let imageView = UIImageView(frame: CGRectMake(40, 40, bounds.width - 80, bounds.height - 200))
-        imageView.image = UIImage(named: station!.logo_url)
+        let image = UIImage(named: station!.logo_url)
+        let margin = CGFloat(100)
+        let newHeight = (image!.size.height / image!.size.width) * (bounds.width - margin - margin)
+        
+        let imageView = UIImageView(frame: CGRectMake(margin, margin, bounds.width - margin - margin, newHeight))
+        
+        imageView.image = image
+
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         imageView.backgroundColor = UIColor(red:0.13, green:0.11, blue:0.35, alpha:1)
         
