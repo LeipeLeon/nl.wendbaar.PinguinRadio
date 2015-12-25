@@ -19,7 +19,8 @@ class StationsCollectionViewController: UICollectionViewController {
         Station(tag: "PinguinClassics",   stream_url: "http://pc192.pinguinradio.com/listen.pls", title: "Pinguin Classics",      logo_url:"logo.PinguinClassics"),
         Station(tag: "PinguinGrooves",    stream_url: "http://pg192.pinguinradio.com/listen.pls", title: "Pinguin Grooves",       logo_url:"logo.PinguinGrooves"),
         Station(tag: "Aardschok",         stream_url: "http://as192.pinguinradio.com/listen.pls", title: "Aardschok Radio",       logo_url:"logo.Aardschok"),
-        Station(tag: "Skaradio",          stream_url: "http://sr192.pinguinradio.com/listen.pls", title: "Skaradio",              logo_url:"logo.Skaradio")
+        Station(tag: "Skaradio",          stream_url: "http://sr192.pinguinradio.com/listen.pls", title: "Skaradio",              logo_url:"logo.Skaradio"),
+        Station(tag: "Pinguinpluche",     stream_url: "http://37.247.41.49:80/;stream.mp3",       title: "Pinguinpluche",         logo_url:"PP")
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
