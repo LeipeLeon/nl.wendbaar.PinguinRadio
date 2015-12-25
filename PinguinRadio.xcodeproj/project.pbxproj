@@ -11,6 +11,7 @@
 		407CB7FF1C25AD2400B89F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407CB7FE1C25AD2400B89F77 /* Assets.xcassets */; };
 		4084B3E01C28BD74005A7E75 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084B3DF1C28BD74005A7E75 /* PlayerViewController.swift */; };
 		4084B3E21C28C67D005A7E75 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084B3E11C28C67D005A7E75 /* Station.swift */; };
+		4098C2B51C2D9BF1004D256C /* UIImageEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4098C2B41C2D9BF1004D256C /* UIImageEffects.swift */; };
 		40A44F431C289311002B309C /* StationsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A44F421C289311002B309C /* StationsCollectionViewController.swift */; };
 		40A44F451C289E6D002B309C /* StationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A44F441C289E6D002B309C /* StationCollectionViewCell.swift */; };
 		40BC8C2E1C288F4000C50E13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BC8C2C1C288F4000C50E13 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		407CB8001C25AD2400B89F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4084B3DF1C28BD74005A7E75 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		4084B3E11C28C67D005A7E75 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		4098C2B41C2D9BF1004D256C /* UIImageEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageEffects.swift; sourceTree = "<group>"; };
 		40A44F421C289311002B309C /* StationsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsCollectionViewController.swift; sourceTree = "<group>"; };
 		40A44F441C289E6D002B309C /* StationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationCollectionViewCell.swift; sourceTree = "<group>"; usesTabs = 1; };
 		40BC8C2D1C288F4000C50E13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				40A44F441C289E6D002B309C /* StationCollectionViewCell.swift */,
 				4084B3DF1C28BD74005A7E75 /* PlayerViewController.swift */,
 				4084B3E11C28C67D005A7E75 /* Station.swift */,
+				4098C2B41C2D9BF1004D256C /* UIImageEffects.swift */,
 			);
 			path = PinguinRadio;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				40A44F431C289311002B309C /* StationsCollectionViewController.swift in Sources */,
 				4084B3E21C28C67D005A7E75 /* Station.swift in Sources */,
+				4098C2B51C2D9BF1004D256C /* UIImageEffects.swift in Sources */,
 				4084B3E01C28BD74005A7E75 /* PlayerViewController.swift in Sources */,
 				407CB7F81C25AD2300B89F77 /* AppDelegate.swift in Sources */,
 				40A44F451C289E6D002B309C /* StationCollectionViewCell.swift in Sources */,
