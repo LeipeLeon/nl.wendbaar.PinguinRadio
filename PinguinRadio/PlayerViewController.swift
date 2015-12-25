@@ -15,6 +15,9 @@ class PlayerViewController: AVPlayerViewController {
     var textView: UITextView!
     var nowPlayingUrl: String!
     var nowPlayingTimer: NSTimer!
+    var nowPlayingText = ""
+    var nowPlayingImage: UIImageView!
+    var nowPlayingImageUrl = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,9 @@ class PlayerViewController: AVPlayerViewController {
 
         let bounds = UIScreen.mainScreen().bounds.size
 
+        nowPlayingImage = UIImageView(frame: CGRectMake(0,0,1920,1080))
+        nowPlayingImage.contentMode = .ScaleAspectFill
+        
         let image = UIImage(named: station!.logo_url)
         let margin = CGFloat(62)
         let newHeight = (image!.size.height / image!.size.width) * (bounds.width - margin - margin)
@@ -29,6 +35,7 @@ class PlayerViewController: AVPlayerViewController {
         let imageView = UIImageView(frame: CGRectMake(margin, margin, bounds.width - margin - margin, newHeight))
         
         imageView.image = image
+        nowPlayingImage.image = image
 
         imageView.contentMode = UIViewContentMode.ScaleAspectFit
         
@@ -38,6 +45,7 @@ class PlayerViewController: AVPlayerViewController {
         textView.backgroundColor = UIColor(red:1, green:1, blue:1, alpha:1)
 
         let overlayView = UIView(frame: CGRectMake(0, 0, bounds.width, bounds.height))
+        overlayView.addSubview(nowPlayingImage)
         overlayView.addSubview(imageView)
         overlayView.addSubview(textView)
 
@@ -73,7 +81,26 @@ class PlayerViewController: AVPlayerViewController {
                     newText += parsed!["artist"]!
                     newText += " - "
                     newText += parsed!["title"]!
-                    textView.text = newText
+                    if (nowPlayingText != newText) {
+                        nowPlayingText = newText
+                        textView.text = newText
+                    }
+                    let tmpNowPlayingImageUrl = "http://player.pinguinradio.com/" + parsed!["image"]!
+                    if (tmpNowPlayingImageUrl != nowPlayingImageUrl) {
+                        nowPlayingImageUrl = tmpNowPlayingImageUrl
+                        if let url = NSURL(string: nowPlayingImageUrl) {
+                            if let data = NSData(contentsOfURL: url) {
+                                let toImage = UIImage(data: data)!.applyBlurWithRadius(1, tintColor: UIColor(white: 0.5, alpha: 0.82), saturationDeltaFactor: 1.8) //.applyExtraLightEffect()
+                                if ((nowPlayingImage) != nil) {
+                                    UIView.transitionWithView(self.nowPlayingImage,
+                                        duration: 3,
+                                        options: UIViewAnimationOptions.TransitionCrossDissolve,
+                                        animations: { self.nowPlayingImage.image = toImage },
+                                        completion: nil)
+                                }
+                            }
+                        }
+                    }
                 }
                 catch let error as NSError {
                     print("A JSON parsing error occurred, here are the details:\n \(error)")
